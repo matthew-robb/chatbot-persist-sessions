@@ -1,6 +1,8 @@
 
 A lightweight example that demonstrates how to create a chat-bot service that persists session context using FastAPI and Langchain. This particular example uses postgres to persist session data and an OpenAI endpoint, however, there are many alternatives, see: [chat memory](https://js.langchain.com/v0.1/docs/integrations/chat_memory/), [chat models](https://python.langchain.com/v0.2/docs/integrations/chat/).
 
+This example shows how to setup [chuncked transfer encoding](https://en.wikipedia.org/wiki/Chunked_transfer_encoding) i.e. response streaming (text/event-stream) in combination with Langcahin memory. Using the `astream` method on the Langchain type `ConversationChain` results in the entire response to be flushed in one go, hence a workaround was adopted which utilises the `astream_log` method.
+
 ### Run App
 1. Create a .env file and set OPENAI_MODEL and OPENAI_API_KEY. 
 2. Run `docker compose up -d` in repo root dir.
