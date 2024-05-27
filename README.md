@@ -12,7 +12,7 @@ This example shows how to setup [chuncked transfer encoding](https://en.wikipedi
 > eb0397f7-1818-4c8c-8ba8-3a717aa8ac5b
 <br/>
 
-2. Introduce yourself as Bob: `curl -N -X POST -H "Content-Type: text/plain" --data "Hi, my name is Bob!" http://localhost:8000/chat/eb0397f7-1818-4c8c-8ba8-3a717aa8ac5b`
+2. Introduce yourself as Bob: `curl -N -X POST --data "Hi, my name is Bob!" http://localhost:8000/chat/eb0397f7-1818-4c8c-8ba8-3a717aa8ac5b`
 > Hello Bob! It's nice to meet you. How can I assist you today?
 <br/>
 
@@ -20,13 +20,13 @@ This example shows how to setup [chuncked transfer encoding](https://en.wikipedi
 > c3e9da2b-3fad-40f9-917b-5fdd5ea80050
 <br/>
 
-4. Introduce yourself as someone else: `curl -N -X POST -H "Content-Type: text/plain" --data "Hi, my name is Matt!" http://localhost:8000/chat/c3e9da2b-3fad-40f9-917b-5fdd5ea80050`
+4. Introduce yourself as someone else: `curl -N -X POST --data "Hi, my name is Matt!" http://localhost:8000/chat/c3e9da2b-3fad-40f9-917b-5fdd5ea80050`
 > Hello Matt! It's nice to meet you. How can I assist you today?
 <br/>
 
-5. Ask what your name is using the first session id: `curl -N -X POST -H "Content-Type: text/plain" --data "What's my name again?" http://localhost:8000/chat/eb0397f7-1818-4c8c-8ba8-3a717aa8ac5b`
+5. Ask what your name is using the first session id: `curl -N -X POST --data "What's my name again?" http://localhost:8000/chat/eb0397f7-1818-4c8c-8ba8-3a717aa8ac5b`
 > Your name is Bob
 <br/>
 
-6. Ask what your name is using the second session id: `curl -N -X POST -H "Content-Type: text/plain" --data "What's my name again?" http://localhost:8000/chat/c3e9da2b-3fad-40f9-917b-5fdd5ea80050`
+6. Ask what your name is using the second session id: `curl -N -X POST --data "What's my name again?" http://localhost:8000/chat/c3e9da2b-3fad-40f9-917b-5fdd5ea80050`
 > Your name is Matt
